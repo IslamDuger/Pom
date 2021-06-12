@@ -21,7 +21,6 @@ public class C3_NegativeTest extends TestBase {
 //    test data password : manager1
     koalaResortLoginPage.passwordTexBox.sendKeys("manager1");
     koalaResortLoginPage.loginButonu.click();
-//    Degerleri girildiginde sayfaya girilemedigini test et
 }
 
 }

@@ -30,5 +30,4 @@ public class C4_ConfigKullanmaTesti extends TestBase {
         koalaResortLoginPage.loginButonu.click();
     }
 
-
     }
