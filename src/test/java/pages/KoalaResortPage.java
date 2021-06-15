@@ -45,10 +45,10 @@ public class KoalaResortPage {
     @FindBy(id = "IDGroup")
     public WebElement acilirMenu;
 
-    @FindBy(id = "btnSubmit")
+    @FindBy(xpath ="//button[@id='btnSubmit']")
     public WebElement saveButonu;
 
-    @FindBy(xpath = "//div[text()='Hotel was inserted successfully']")
+    @FindBy(xpath = "//div[@class='bootbox-body']")
     public WebElement sonucYazisiElementi;
 
     @FindBy(xpath = "//*[text()='OK']")
@@ -110,6 +110,16 @@ public class KoalaResortPage {
     @FindBy(xpath = "//tbody//tr")
     public List<WebElement> satirlarListesi;
 
+    @FindBy(xpath = "//thead//th")
+    public List<WebElement>sutunsayisi;
+    @FindBy(xpath ="//thead//tr[1]//t")
+    public List<WebElement>sutunverileri;
+    @FindBy(xpath = "//tbody//tr")
+     public List<WebElement>bodySatirsayisi;
+    @FindBy(xpath = "//tbody//tr[4]//td")
+    public List<WebElement>dortduncuSatirElementeri;
+
+
     public void koalaResortLoginn(){
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         ilkLoginLinki.click();
@@ -128,6 +138,31 @@ public class KoalaResortPage {
 
 
     }
+    public String dataStringBul(int satirNo, int sutunNo){
+        // ornek : her 3. satirdaki 2.sutunu bulmak istersek //tbody//tr[3]//td[2] yazabiliriz
+        String dataPath="//tbody//tr["+ satirNo +"]//td["+sutunNo+"]";
+
+        return Driver.getDriver().findElement(By.xpath(dataPath)).getText();
+    }
+
+    public WebElement dataWebelementiBul(int satirNo, int sutunNo){
+        // ornek : her 3. satirdaki 2.sutunu bulmak istersek //tbody//tr[3]//td[2] yazabiliriz
+        String dataPath="//tbody//tr["+ satirNo +"]//td["+sutunNo+"]";
+
+        return Driver.getDriver().findElement(By.xpath(dataPath));
+    }
+
+    public void istenenHucreyiYazdir(int satirNo, int sutunNo){
+
+        // ornek : 5.satir 4 sutunu yazdir  //tbody//tr[   5   ]//td[   4    ]
+        String hucreXPath= "//tbody//tr["+ satirNo +"]//td["+ sutunNo + "]";
+
+        WebElement istenenDataElementi= Driver.getDriver().findElement(By.xpath(hucreXPath));
+
+        System.out.println(istenenDataElementi.getText());
+    }
+
+
 
 
 }

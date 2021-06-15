@@ -91,7 +91,7 @@ public class C1_Webtable {
         // 7. satiri yazdiralim
         System.out.println("=================");
         koalaResortPage.istenenSatiriYazdir(5);
-        Driver.closeDriver();
+        //Driver.closeDriver();
 
     }
 
