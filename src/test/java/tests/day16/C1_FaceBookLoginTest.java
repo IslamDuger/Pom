@@ -7,7 +7,7 @@ import pages.FacebookLoginPage;
 import utilities.TestBase;
 
 public class C1_FaceBookLoginTest extends TestBase {
-    @Test
+    @Test (groups = {"mini_regression","smoke"})
     public void gelenekselTest(){
         driver.get("https://facebook.com");
         driver.findElement(By.xpath("//*[@title='Alles accepteren']")).click();
@@ -19,7 +19,7 @@ public class C1_FaceBookLoginTest extends TestBase {
 
 
     }
-    @Test
+    @Test (groups = "mini_regression")
     public void pageIleTest(){
         driver.get("https://facebook.com");
 
@@ -28,6 +28,7 @@ public class C1_FaceBookLoginTest extends TestBase {
         facebookLoginPage.emailTextBox.sendKeys("selam@gmail.com");
         facebookLoginPage.passwordTexBox.sendKeys("12334");
         facebookLoginPage.sendbutton.click();
+
 
     }
 }

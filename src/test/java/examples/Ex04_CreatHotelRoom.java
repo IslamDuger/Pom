@@ -1,4 +1,4 @@
-package smokeTest;
+package examples;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,7 +8,7 @@ import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class E2ECreatHotelRoom {
+public class Ex04_CreatHotelRoom {
     @Test
     public void creatHotelRoom(){
 //Create class HotelRoomCreation
@@ -16,7 +16,7 @@ public class E2ECreatHotelRoom {
         koalaResortPage.koalaResortLoginn();
 
 //Click on Hotel Management
-        koalaResortPage.hotelManagement.click();
+       koalaResortPage.hotelManagement.click();
 //Click on Hotel Rooms
         koalaResortPage.hotelRooms.click();
 //Click on Add Hotel Room
@@ -44,7 +44,7 @@ public class E2ECreatHotelRoom {
                 sendKeys(Keys.TAB).
                 click(koalaResortPage.saveAddekiButtonu).
                 perform();
-        //To enter a price, we can send keys
+     //To enter a price, we can send keys
 //Click Save
 //Verify the message: HotelRoom was inserted successfully
 //Click OK
@@ -52,5 +52,3 @@ public class E2ECreatHotelRoom {
 
     }
 }
-
-

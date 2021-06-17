@@ -20,7 +20,7 @@ public class C1_Webtable {
                 ○ 4.satirdaki(row) elementleri konsolda yazdırın.
      */
 
-    @Test
+    @Test (groups = "smoke")
     public void table(){
         KoalaResortPage koalaResortPage=new KoalaResortPage();
         koalaResortPage.koalaResortLoginn();
@@ -56,7 +56,7 @@ public class C1_Webtable {
 
     }
 
-    @Test
+    @Test (groups = "mini_regression")
     public void getRows(){
         //  ● printRows() metodu oluşturun //tr
         //                ○ table body’sinde bulunan toplam satir(row) sayısını bulun.
@@ -92,6 +92,7 @@ public class C1_Webtable {
         System.out.println("=================");
         koalaResortPage.istenenSatiriYazdir(5);
         //Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 

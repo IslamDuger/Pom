@@ -57,11 +57,22 @@ public class KoalaResortPage {
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRooms;
 
-    @FindBy(xpath = "//*[text()='Add Hotelroom ']")
+    @FindBy(partialLinkText = "ADD HOTELROOM")
     public WebElement addHotelRoom;
 
     @FindBy(id = "IDHotel")
     public WebElement idHotelDropdown;
+    @FindBy(id="Code")
+    public WebElement codeSec;
+    @FindBy(id="Name")
+    public WebElement nameSelect;
+
+    @FindBy(id="Location")
+    public WebElement locationSelect;
+    @FindBy(xpath = "//textarea[@dir='ltr']")
+    public WebElement descriptionSelect;
+    @FindBy(xpath= "//*[@id='Price']")
+    public WebElement priceSelect;
 
     @FindBy(xpath = "//textarea[@dir='ltr']")
     public WebElement roomTextBox;
@@ -80,6 +91,11 @@ public class KoalaResortPage {
 
     @FindBy(id = "MaxChildCount")
     public WebElement maxChildCount;
+    @FindBy(xpath = "//*[@name='IsAvailable']")
+    public WebElement isAvailable;
+
+    @FindBy(id="btnSubmit")
+    public WebElement saveAddekiButtonu;
 
     @FindBy(xpath = "//*[text()='HotelRoom was inserted successfully']")
     public WebElement roomCreatedElementi;
