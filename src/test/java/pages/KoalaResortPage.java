@@ -134,6 +134,8 @@ public class KoalaResortPage {
      public List<WebElement>bodySatirsayisi;
     @FindBy(xpath = "//tbody//tr[4]//td")
     public List<WebElement>dortduncuSatirElementeri;
+    @FindBy(xpath = "//*[.='Recent Blog']")
+    public WebElement recentBlog;
 
 
     public void koalaResortLoginn(){

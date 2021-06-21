@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AmazonPage;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -106,6 +108,13 @@ public class ReusableMethods {
             System.out.println(
                     "Timeout waiting for Page Load Request to complete after " + timeOutInSeconds + " seconds");
         }
+    }
+    //==========JsExecutor=============//
+    public static void jsExecuterAmazon(){
+        AmazonPage amazonPage=new AmazonPage();
+        JavascriptExecutor je=(JavascriptExecutor) Driver.getDriver();
+
+
     }
     //======Fluent Wait====//
     public static WebElement fluentWait(final WebElement webElement, int timeinsec) {

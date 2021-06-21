@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="methodlar tekrar">
+    <test name="methodlar">
+        <packages>
+            <package name="tests.day15"></package>
+
+        </packages>
+
+        <classes>
+            <class name="examples.Ex9">
+                <methods>
+                    <exclude name="test01">
+
+                    </exclude>
+                </methods>
+            </class>
+        </classes>
+       </test>
+</suite>

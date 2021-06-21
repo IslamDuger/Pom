@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Amozon">
+    <test name="Dort Test Calistirma">
+        <classes>
+            <class name="examples.Ex8"></class>
+            <class name="examples.Ex9"></class>
+        </classes>
+     </test>
+</suite>
