@@ -23,6 +23,8 @@ public class KoalaResortPage {
 
     @FindBy(id = "Password")
     public WebElement passwordTexBox;
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement checkAvailability;
 
     @FindBy(id = "btnSubmit")
     public WebElement loginButonu;

@@ -70,6 +70,7 @@ public class ReusableMethods {
         }
         return elemTexts;
     }
+
     //===============Explicit Wait==============//
     public static void waitFor(int sec) {
         try {
@@ -110,10 +111,24 @@ public class ReusableMethods {
         }
     }
     //==========JsExecutor=============//
-    public static void jsExecuterAmazon(){
-        AmazonPage amazonPage=new AmazonPage();
-        JavascriptExecutor je=(JavascriptExecutor) Driver.getDriver();
+    public static void jsExecuterAmazon(WebElement element){
+      JavascriptExecutor javascriptExecutor=(JavascriptExecutor) Driver.getDriver();
+      javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);",element);
 
+
+
+    }
+    //=========ClickElementByJs==========
+    //this method will takes two parameter:WebElemenet and WebDriver
+    //When you pass the element,Js will click an that element
+    public static void clickElementByJs(WebElement element){
+        JavascriptExecutor javascriptExecutor=((JavascriptExecutor) Driver.getDriver());
+        javascriptExecutor.executeScript("arguments[0].click();",element);
+    }
+    //========Click google akkord=========
+    public static void googleAkkordClick(WebElement element){
+        JavascriptExecutor javascriptExecutor=((JavascriptExecutor) Driver.getDriver());
+        javascriptExecutor.executeScript("arguments[0].click();",element);
 
     }
     //======Fluent Wait====//
@@ -127,6 +142,13 @@ public class ReusableMethods {
             }
         });
         return element;
+    }
+    public static List<String> getElementsTextTum(List<WebElement> list) {
+        List<String> elemTexts = new ArrayList<>();
+        for (WebElement el : list) {
+            elemTexts.add(el.getText());
+        }
+        return elemTexts;
     }
 }
 
