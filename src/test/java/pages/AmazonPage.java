@@ -24,6 +24,11 @@ public class AmazonPage {
         public List<WebElement> amazonYazisiAra;
     @FindBy(xpath = "//tbody//tr[5]//td[3]")
     public WebElement homeService;
+    @FindBy(id="twotabsearchtextbox")
+    public WebElement aramaKutusu;
+
+    @FindBy(xpath = "//div[@class='sg-col-inner']")
+    public WebElement sonucYazisiElementi;
 
     @FindBy(xpath = "//tbody//tr//td")
     public List<WebElement>tableTamami;
